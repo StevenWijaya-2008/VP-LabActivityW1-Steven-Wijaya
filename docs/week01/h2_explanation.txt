@@ -1,0 +1,3 @@
+Flutter dirancang dengan prinsip Single Responsibility (tanggung jawab tunggal), di mana widget Text hanya fokus mengatur bagaimana tulisan ditampilkan (font, warna, ukuran), sedangkan widget tata letak memikirkan posisi elemen.
+Jika posisi tengah (center) dijadikan properti di dalam Text, maka properti posisi tersebut harus diduplikasi ke dalam setiap widget lain yang ada di Flutter (seperti Image, Icon, atau Button), yang akan membuat ukuran framework membengkak.
+Dengan menjadikan Center sebagai widget terpisah yang membungkus (wrapper), Flutter memisahkan logika posisi (layouting) dari logika visual, sehingga widget Center dapat didaur ulang untuk memosisikan widget bentuk apa pun ke tengah layar.
