@@ -11,11 +11,11 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Warung Digital'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: const Padding(
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text(
               'Daftar Harga',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),

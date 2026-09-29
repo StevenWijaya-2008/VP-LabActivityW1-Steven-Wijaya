@@ -27,7 +27,10 @@ void main() {
   List<MenuItem> itemsUnder15k = menu.where((item) => item.finalPrice() < 15000).toList();
   double totalPrice = menu.fold(0.0, (sum, item) => sum + item.finalPrice());
 
+  //ignore: avoid_print
   print('Semua Nama: $allNames');
+  //ignore: avoid_print
   print('Menu di bawah 15k: ${itemsUnder15k.map((i) => i.name).toList()}');
+  //ignore: avoid_print
   print('Total Harga: Rp $totalPrice');
 }
