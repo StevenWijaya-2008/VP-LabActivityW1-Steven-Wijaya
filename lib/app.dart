@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
-import 'features/home/presentation/home_screen.dart';
+import 'features/menu/presentation/menu_screen.dart';
 
 class WarungApp extends StatelessWidget {
   const WarungApp({super.key});
@@ -10,7 +10,7 @@ class WarungApp extends StatelessWidget {
     return MaterialApp(
       title: 'Warung Digital',
       theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      home: const MenuScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
