@@ -12,16 +12,29 @@ class EmptyWatchlist extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.movie_filter, size: 48, color: Colors.grey),
-          const SizedBox(height: 8),
-          Text('No drama found for "$query"'),
-          TextButton(
+          Icon(
+            Icons.movie_filter_outlined,
+            size: 64,
+            color: theme.colorScheme.outline,
+          ),
+          const SizedBox(height: 16),
+          Text(
+            'No drama found for "$query"',
+            style: theme.textTheme.bodyLarge?.copyWith(
+              color: theme.colorScheme.onSurfaceVariant,
+            ),
+          ),
+          const SizedBox(height: 12),
+          TextButton.icon(
             onPressed: onClear,
-            child: const Text('Clear search'),
+            icon: const Icon(Icons.close),
+            label: const Text('Clear search'),
           ),
         ],
       ),

@@ -13,13 +13,27 @@ class DramaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+
     return Card(
-      margin: const EdgeInsets.only(bottom: 8),
       child: ListTile(
-        title: Text(drama.title, style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Text('${drama.genre} • Ep ${drama.watchedEpisodes}/${drama.totalEpisodes}'),
-        trailing: IconButton(
-          icon: const Icon(Icons.add_circle_outline),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        title: Text(
+          drama.title,
+          style: theme.textTheme.titleMedium?.copyWith(
+            fontWeight: FontWeight.bold,
+            color: theme.colorScheme.onSurface,
+          ),
+        ),
+        subtitle: Text(
+          '${drama.genre} • Ep ${drama.watchedEpisodes}/${drama.totalEpisodes}',
+          style: theme.textTheme.bodyMedium?.copyWith(
+            color: theme.colorScheme.onSurfaceVariant,
+          ),
+        ),
+        trailing: IconButton.filledTonal(
+          icon: const Icon(Icons.add),
+          tooltip: 'Add Episode',
           onPressed: onAddEpisode,
         ),
       ),

@@ -17,18 +17,22 @@ class WatchlistSearch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
-      child: TextField(
+      padding: const EdgeInsets.all(16.0),
+      child: SearchBar(
         controller: controller,
+        hintText: 'Search drama...',
+        leading: const Icon(Icons.search),
+        trailing: [
+          if (query.isNotEmpty)
+            IconButton(
+              icon: const Icon(Icons.clear),
+              onPressed: onClear,
+            ),
+        ],
         onChanged: onChanged,
-        decoration: InputDecoration(
-          hintText: 'Search drama...',
-          prefixIcon: const Icon(Icons.search),
-          suffixIcon: query.isEmpty ? null : IconButton(
-            icon: const Icon(Icons.clear),
-            onPressed: onClear,
-          ),
-          border: const OutlineInputBorder(),
+        elevation: WidgetStateProperty.all(0),
+        backgroundColor: WidgetStateProperty.all(
+          Theme.of(context).colorScheme.surfaceContainerHigh,
         ),
       ),
     );
