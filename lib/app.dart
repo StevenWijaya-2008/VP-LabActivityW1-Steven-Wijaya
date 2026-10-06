@@ -8,10 +8,12 @@ class WarungApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Warung Digital',
-      theme: AppTheme.lightTheme,
-      home: const WatchlistScreen(),
+      title: 'Drama Vault',
       debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
+      home: const WatchlistScreen(),
     );
   }
 }

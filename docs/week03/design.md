@@ -1,0 +1,4 @@
+# Design System Documentation - Week 03
+
+## Seed Color Justification
+Warna benih (seed color) `#C2185B` (Deep Crimson Rose) dipilih karena mencerminkan karakteristik emosional, dramatis, dan ekspresif yang menjadi ciri khas konten drama Korea (K-Drama). Bagi pengguna target (penggemar K-Drama) dan organisasi platform hiburan, warna ini memberikan kesan visual yang modern, premium, dan dinamis—berbeda dari aplikasi pelacak generik yang cenderung kaku. Material 3 secara otomatis menurunkan seluruh palet warna pendukung (seperti `primaryContainer`, `surfaceTint`, dan warna teks ber-kontras tinggi) dari satu seed color ini, menjamin keterbacaan yang aman (accessible) baik pada mode terang maupun gelap.
